@@ -31,8 +31,7 @@ provider=sqlite
 directory=/var/lib/rstudio-server
 END
 
-# Set OMP_NUM_THREADS to prevent OpenBLAS (and any other OpenMP-enhanced libraries used by R) from spawning more threads than the number of processors
-allocated to the job.
+# Set OMP_NUM_THREADS to prevent OpenBLAS (and any other OpenMP-enhanced libraries used by R) from spawning more threads than the number of processors allocated to the job.
 
 # Set R_LIBS_USER to a path specific to rocker/rstudio to avoid conflicts with personal libraries from any R installation in the host environment.
 

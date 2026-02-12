@@ -8,15 +8,15 @@
 #SBATCH --signal=USR2
 #SBATCH --output=%x_%j.out
 # The following line specifies the work directory for this job.
-#SBATCH --chdir=/scratch/htc/<username>/rstudio-server-sif/WORKDIR                       # Update this line
+#SBATCH --chdir=/scratch/htc/<username>/WORKDIR                       # Update this line
 
 # This script will request a single CPU with four threads with 20GB of RAM for 2 hours.
 # You can adjust --time, --nodes, --ntasks, and --mem above or on the sbatch command line to adjust these settings for your session.
 
 # --output=%x_%j.out creates a output file called rstudio-server_NNNNNNNN.out, where the %x is short hand for --job-name above and the N's are an 8-digit. jobID assigned by SLURM when our job is submitted.
 
-RSTUDIO_CWD="/scratch/htc/<username>/rstudio-server-sif/WORKDIR"                          # Update this line
-RSTUDIO_SIF="/scratch/htc/<username>/rstudio-server-sif/rstudio_latest.sif"               # Update this line
+RSTUDIO_CWD="/scratch/htc/<username>//WORKDIR"                                         # Update this line
+RSTUDIO_SIF="/home/htc/<username>/rstudio-server-sif/rstudio_latest.sif"               # Update this line
 
 # Create temp directory for ephemeral content to bind-mount in the container
 RSTUDIO_TMP="$TMPDIR"
